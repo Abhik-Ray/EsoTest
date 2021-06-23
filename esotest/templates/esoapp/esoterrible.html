@@ -1,0 +1,28 @@
+{% extends 'esoapp/base.html'  %}
+{% block body_block %}
+
+<div class="row mt-4 justify-content-center">
+    <div class="col-3">
+        About Esoterrible
+    </div>
+    <div class="col-4">
+        <form>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Your Code Here</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="16"
+                    style="resize: none;"></textarea>
+            </div>
+        </form>
+        <input name="submit" id="submit" class="btn btn-primary" type="button" value="Run!">
+    </div>
+    <div class="col-4">
+        <form>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Output!</label>
+                <textarea readonly class="form-control" id="exampleFormControlTextarea2" rows="16"
+                    style="resize: none;" placeholder="Hello"></textarea>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
