@@ -6,23 +6,24 @@
         About Brainfuck
     </div>
     <div class="col-4">
-        <form>
             <div class="form-group">
-                <label for="exampleFormControlTextarea1">Your Code Here</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="16"
-                    style="resize: none;"></textarea>
+                <form method="get">
+                <!-- <label for="command">Your Code Here</label>
+                <textarea class="form-control" id="command" name="command" rows="16"
+                    style="resize: none;">{{command}}</textarea> -->
+                    <h5>Enter script here:</h5> 
+                    <textarea class="form-control" name="command" id="command" cols="30" rows="13" style="resize: none;">{{command}}</textarea><br>
+                    <button class="btn btn-primary" type="submit">Run!</button>
+                </form>
+                <br>
             </div>
-        </form>
-        <input name="submit" id="submit" class="btn btn-primary" type="button" value="Run!">
     </div>
     <div class="col-4">
-        <form>
             <div class="form-group">
-                <label for="exampleFormControlTextarea1">Output!</label>
-                <textarea readonly class="form-control" id="exampleFormControlTextarea2" rows="16"
-                    style="resize: none;" placeholder="Hello"></textarea>
+                <h5>Output!</h5>
+                <textarea readonly class="form-control" id="exampleFormControlTextarea2" rows="13"
+                    style="resize: none;">{{result}}</textarea>
             </div>
-        </form>
     </div>
 </div>
 {% endblock %}

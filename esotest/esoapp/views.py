@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+import brainfuck as bf
 # Create your views here.
 
 
@@ -8,7 +8,13 @@ def index(request):
 
 
 def brainfuck(request):
-    return render(request, 'esoapp/brainfuck.html')
+    command = "code here"
+    result = 'hello'
+    if request.GET:
+        print("Here!")
+        command = request.GET['command']
+        result = bf.evaluate(command)
+    return render(request, 'esoapp/brainfuck.html', {"command": command, "result": result})
 
 
 def about(request):
