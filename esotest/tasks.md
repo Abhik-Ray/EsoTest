@@ -1,0 +1,32 @@
+- [x] Make Skeletal FrontEnd
+- [x] Make POST/GET work seamlessly
+- [ ] Polish CSS for each page
+  - [ ] Populate static sections
+  - [ ] Add Wallpaper
+  - [ ] Add Light and Dark mode and animate button
+  - [ ] Integrate to all pages
+  - [ ] Embed to backend
+- [ ] Add animations
+  - [ ] Add animated pop up text for language
+  - [ ] Add page transition effects
+  - [ ] Add sound effects for switching b/w Day and Night
+- [ ] Implement code compiler for each language
+  - [ ] esoterrible
+  - [ ] spl
+  - [ ] malbolge
+- [ ] Add description for each language
+  - [ ] BrainFuck
+  - [ ] esoterrible
+  - [ ] spl
+  - [ ] malbolge
+- [ ] Deploy
+  - [ ] Add dependecy system
+  - [ ] Make it reactive
+- [ ] Finish the work in progress sections
+  - [ ] about.html
+  - [ ] example.html
+- [ ] Promote!
+  - [ ] Reddit
+  - [ ] WhatsApp
+  - [ ] Discord
+  - [ ] LinkedIn
