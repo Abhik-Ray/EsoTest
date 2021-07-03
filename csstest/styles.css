@@ -1,0 +1,70 @@
+html[data-theme="light"] {
+	--text-color: black;
+	--background: skyblue;
+	--navbar-color: #17a2b8;
+	--navbar-icon-color: black;
+	--nav-link-color: black;
+	--dropdown-bg-color: lightblue;
+	--dropdown-item-color: black;
+	--container-inside-color: rgb(206, 230, 238);
+	--theme-button-string-color: black;
+	--theme-button-icon-color: white;
+	--theme-button-color: black;
+}
+html[data-theme="dark"] {
+	--text-color: white;
+	--background: #252525;
+	--navbar-color: #3a3a3a;
+	--nav-link-color: white;
+	--dropdown-item-color: white;
+	--navbar-icon-color: rgb(255, 255, 255);
+	--dropdown-bg-color: rgb(112, 112, 112);
+	--container-inside-color: rgb(63, 63, 63);
+	--theme-button-string-color: rgb(255, 255, 255);
+	--theme-button-icon-color: black;
+	--theme-button-color: white;
+}
+* {
+	color: var(--text-color);
+}
+html {
+	height: 100vh;
+	width: 100vw;
+}
+body {
+	background-color: var(--background);
+}
+#navbar-main {
+	background-color: var(--navbar-color);
+}
+nav > div > ul > i {
+	color: var(--navbar-icon-color);
+}
+.dropdown-menu {
+	background-color: var(--dropdown-bg-color);
+}
+#container-inside {
+	background-color: var(--container-inside-color);
+}
+#theme-button-string {
+	height: 120%;
+	width: 1px;
+	background-color: var(--theme-button-string-color);
+	transform: translate(20px, -17px);
+}
+#theme-button {
+	background-color: var(--theme-button-color);
+	transform: translate(0, -10px);
+}
+#theme-button-icon {
+	color: var(--theme-button-icon-color);
+}
+#navbarDropdown {
+	color: var(--nav-link-color);
+}
+#dropdown-item {
+	color: var(--dropdown-item-color);
+}
+#theme-button:hover #theme-button {
+	transform: translate(100, 100);
+}

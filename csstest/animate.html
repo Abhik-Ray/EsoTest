@@ -1,33 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+<meta charset="UTF-8">
+
 
 <head>
     <title>Document</title>
+    <link rel="stylesheet" href="anim.css">
 </head>
 
 <body>
-    <style>
-        .object1 {
-            height: 50px;
-            width: 50px;
-            transition: translate ease-in;
-            animation: top-to-bottom1 50s 3s;
-            animation-iteration-count: infinite;
-        }
-
-        @keyframes top-to-bottom1 {
-            0% {
-                transform: translate(-5, -5) rotateZ(0deg);
-            }
-
-            100% {
-                transform: translate(5vw, 95vh) rotateZ(50deg);
-            }
-        }
-    </style>
-    <div class="object1">
-        <h1>?</h1>
-    </div>
+    <h1>BrainFuck</h1>
+    <script src="anim.js"></script>
 </body>
-
 </html>

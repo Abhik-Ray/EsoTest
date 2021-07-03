@@ -3,7 +3,7 @@
 - [ ] Polish CSS for each page
   - [ ] Populate static sections
   - [ ] Add Wallpaper
-  - [ ] Add Light and Dark mode and animate button
+  - [x] Add Light and Dark mode and animate button
   - [ ] Integrate to all pages
   - [ ] Embed to backend
 - [ ] Add animations

@@ -1,0 +1,22 @@
+/* .object1 {
+	height: 50px;
+	width: 50px;
+	transition: translate ease-in;
+	animation: top-to-bottom1 50s 2s;
+	animation-iteration-count: infinite;
+}
+.obj2 {
+	transition: ease-out;
+	width: min-content;
+	font-family: sans-serif;
+	animation: reveal 2s;
+} */
+span {
+	opacity: 0;
+	display: inline-block;
+}
+span.fade {
+	opacity: 1;
+	font-family: courier;
+	transform: translateY(0px);
+}
