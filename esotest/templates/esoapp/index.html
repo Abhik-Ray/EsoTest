@@ -10,7 +10,7 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 
-<body>
+<body style="background-color: blueviolet;">
     <div class="wrapper" style="display: grid; height: 100vh; width: 100vw; text-align: center; align-items: center;">
         <div style="grid-column:1; grid-row:1"></div>
         <div style="grid-column:2; grid-row:1"></div>
@@ -18,12 +18,14 @@
         <div style="grid-column:1; grid-row:2"></div>
         <div style="grid-column:2; grid-row:2">
             <div class="container">
-                <div class="jumbotron">
+                <div class="jumbotron" style="background-color: #C3C3E5;">
                     <h1 class="display-3">Welcome to EsoTest</h1>
                     <p class="lead">Your site to code all things crazy</p>
                     <hr class="my-2">
                     <p class="lead">
-                        <a class="btn btn-warning btn-lg" href="{% url 'brainfuck' %}" role="button">Begin the Torture</a>
+                        <a class="btn btn-warning btn-lg" href="{% url 'esochoose' %}" role="button">
+                                Begin the Torture
+                        </a>
                     </p>
                     <p>
                         More Esoteric Programming Languages are being added!

@@ -2,29 +2,40 @@
 {% block body_block %}
 
 
-<div class="row mt-4 justify-content-center">
-    <div id="about" class="col-3">
-        About Brainfuck
+<div style="display: grid; grid-template-columns: 5fr 6fr 1fr; justify-items: center;">
+    <div style="justify-items: left;">
+        <h1>Brainfuck</h1>
+        <p>
+            This language is about love, about peace and about democracy. 
+            JK democracy sucks here's to monarchy and the top 1% who we try to become but can never achieve
+        </p>
     </div>
-    <div class="col-4">
-            <div class="form-group">
-                <form method="get">
-                <!-- <label for="command">Your Code Here</label>
-                <textarea class="form-control" id="command" name="command" rows="16"
-                    style="resize: none;">{{command}}</textarea> -->
-                    <h5>Enter script here:</h5> 
-                    <textarea class="form-control" name="command" id="command" cols="30" rows="13" style="resize: none;">{{command}}</textarea><br>
-                    <button class="btn btn-primary" type="submit">Run!</button>
-                </form>
-                <br>
+    <div>
+        <form method="get" class="form-group">
+            <div style="display: grid; justify-items: center; justify-content: space-between; grid-template-rows: 6fr 2fr 6fr">
+                <div>
+                    <textarea class="form-control" name="command" id="command" cols="70" rows="6" style="resize: none;">{{command}}</textarea><br>                                
+                </div>
+                <div style="color: white;">
+                    <button class="btn btn-success" type="submit"><i class="bi bi-gear-wide" style="color: white;"></i> Execute</button>
+                    <div class="btn btn-danger"><i class="bi bi-book" style="color: white;"></i> Learn</div>
+                    <div class="btn btn-warning" style="color: white;"><i class="bi bi-lightning" style="color: white;"></i> Challenge</div>
+                    <div class="btn btn-primary"><i class="bi bi-bookmark" style="color: white;"></i> Bookmark</div>
+                </div>
+                <div>
+                    <textarea readonly class="form-control" id="result" cols="70" rows="6" style="resize: none;">{{result}}</textarea>
+                </div>
             </div>
+            </form>
     </div>
-    <div id= "result" class="col-4">
-            <div class="form-group">
-                <h5>Output!</h5>
-                <textarea readonly class="form-control" id="exampleFormControlTextarea2" rows="13"
-                    style="resize: none;">{{result}}</textarea>
-            </div>
+    <div style="display: grid; grid-template-rows: 5fr 1fr 5fr; justify-content: center;">
+        <div id="theme-button-string"></div>
+        <div>
+            <button id="theme-button" class="btn rounded-circle">
+                <i id="theme-button-icon" class="bi bi-moon-stars-fill"></i>
+            </button>
+        </div>
+        <div></div>
     </div>
-</div>
+  </div>   
 {% endblock %}

@@ -5,6 +5,7 @@ from esoapp import views
 appname = "esoapp"
 
 urlpatterns = [
+    path('esochoose/', views.esochoose, name="esochoose"),
     path('brainfuck/', views.brainfuck, name="brainfuck"),
     path('about/', views.about, name="about"),
     path('spl/', views.spl, name="spl"),

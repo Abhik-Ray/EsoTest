@@ -5,7 +5,7 @@
   - [ ] Add Wallpaper
   - [x] Add Light and Dark mode and animate button
   - [ ] Integrate to all pages
-  - [ ] Embed to backend
+  - [x] Embed to backend
 - [ ] Add animations
   - [ ] Add animated pop up text for language
   - [ ] Add page transition effects

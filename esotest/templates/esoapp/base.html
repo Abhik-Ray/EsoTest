@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 {% load static %}
-
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EsoTest</title>
+
     <!-- cdn imports -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -22,14 +22,15 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 
-    <!-- self stylesheets -->
-    <link rel="stylesheet" href="{% static '/style/editor.css' %}">
+    <!-- self links -->
+    <link rel="stylesheet" href="{% static 'style/editor.css' %}">
+    <script src="{% static 'scripts/editor.js' %}"></script> 
 
 </head>
 
-<body style="background-color: skyblue;">
+<body>
     <!-- navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-info rounded-bottom">
+    <nav id="navbar-main" class="navbar navbar-expand-lg navbar-light rounded-bottom">
         <a class="navbar-brand" href="{% url 'index' %}"> <strong>EsoTest</strong> </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,7 +40,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="{% url 'about' %}">About <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" id="navbarDropdown" href="{% url 'about' %}">About</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -47,29 +48,27 @@
                         Language
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="{% url 'brainfuck' %}">BrainFuck</a>
-                        <a class="dropdown-item" href="{% url 'esoterrible' %}">Esoterrible</a>
-                        <a class="dropdown-item" href="{% url 'malbolge' %}">MalBolge</a>
-                        <a class="dropdown-item" href="{% url 'spl' %}">Shakespeare</a>
+                        <a id="dropdown-item" class="dropdown-item" href="{% url 'brainfuck' %}">BrainFuck</a>
+                        <a id="dropdown-item" class="dropdown-item" href="{% url 'esoterrible' %}">Esoterrible</a>
+                        <a id="dropdown-item" class="dropdown-item" href="{% url 'malbolge' %}">MalBolge</a>
+                        <a id="dropdown-item" class="dropdown-item" href="{% url 'spl' %}">Shakespeare</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="{% url 'example' %}">Examples</a>
+                        <a id="dropdown-item" class="dropdown-item" href="{% url 'example' %}">Examples</a>
                     </div>
                 </li>
             </ul>
             <ul>
-                <i class="bi bi-github" style="font-size: 2rem; color: black;"></i>
+                <i class="bi bi-github" style="font-size: 2rem;"></i>
             </ul>
         </div>
     </nav>
+
+    <!-- main -->
     <div class="container">
-        <div class="container m-4 p-3 rounded" style="background-color: rgb(206, 230, 238);">
-           {% block body_block %}
-           {% endblock %}
-            <div class="container" style="text-align: right;">
-                <button class="btn btn-dark rounded-circle">
-                    <i class="bi bi-moon-stars-fill"></i>
-                </button>
-            </div>
+        <div id="container-inside" class="container m-4 p-3 rounded">
+            {% block body_block %}
+            {% endblock %}        
+        </div>
         </div>
     </div>
 </body>

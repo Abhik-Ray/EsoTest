@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>Esotest</title>
+    <link rel="stylesheet" href="{% static 'style/esochoose.css' %}">
+</head>
+<body>
+    <div class="wrapper">
+        <div style="grid-column:1; grid-row:1;">
+            <div class="card" style="background-image: url({% static 'card/EsoTest-01.png' %});" onclick="window.location='{% url 'brainfuck' %}';">
+                <p> Brainfuck </p>
+            </div>
+        </div>
+        <div style="grid-column:2; grid-row:1">
+            <div class="card" style="background-image: url({% static 'card/EsoTest-02.png' %});" onclick="window.location='{% url 'esoterrible' %}';">
+                <p>Esoterrible</p>                
+            </div>
+        </div>
+        <div style="grid-column:3; grid-row:1">
+            <div class="card" style="background-image: url({% static 'card/EsoTest-03.png' %});" onclick="window.location='{% url 'malbolge' %}';">
+                <p>Malbolge</p>
+            </div>
+        </div>
+        <div style="grid-column:1; grid-row:2">
+            <div class="card" style="background-image: url({% static 'card/EsoTest-04.png' %});" onclick="window.location='{% url 'example' %}';">
+                <p>Examples</p>
+            </div>
+        </div>
+        <div style="grid-column:2; grid-row:2">
+            <div class="card" style="background-image: url({% static 'card/EsoTest-05.png' %});" onclick="window.location='{% url 'spl' %}';">
+                <p>Shakespeare <br> Programming <br> Language</p>
+            </div>
+        </div>
+        <div style="grid-column:3; grid-row:2">
+            <div class="card" style="background-image: url({% static 'card/EsoTest-06.png' %});" onclick="window.location='{% url 'about' %}';">
+                <p>About</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

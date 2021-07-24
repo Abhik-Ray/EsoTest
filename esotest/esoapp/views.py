@@ -35,3 +35,7 @@ def esoterrible(request):
 
 def example(request):
     return render(request, 'esoapp/example.html')
+
+
+def esochoose(request):
+    return render(request, 'esoapp/esochoose.html')
